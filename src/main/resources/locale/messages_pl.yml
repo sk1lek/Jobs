@@ -65,10 +65,10 @@ command:
       args: '[jobname]/all/reset [time]/[rate]'
     output:
       allreset: Wszystkie boostery pieniężne zostały wyłączone
-      jobsboostreset: Boost pieniężny został wyłączony dla pracy %jobname%
+      jobsboostreset: Boost pieniężny został wyłączony dla pracy %jobfullname%
       nothingtoreset: Nie ma nic do zresetowania
       boostalladded: Boost pieniężny %boost% dodany do wszystkich prac!
-      boostadded: Boost pieniężny &e%boost% &adodany do pracy &e%jobname%!
+      boostadded: Boost pieniężny &e%boost% &adodany do pracy &e%jobfullname%!
       infostats: '&c-----> &aStawka pieniężna x%boost% włączona&c <-------'
   pointboost:
     help:
@@ -76,10 +76,10 @@ command:
       args: '[jobname]/all/reset [time]/[rate]'
     output:
       allreset: Wszystkie boosty punktowe zostały wyłączone
-      jobsboostreset: Boost punktów został wyłączony dla pracy %jobname%
+      jobsboostreset: Boost punktów został wyłączony dla pracy %jobfullname%
       nothingtoreset: Nie ma nic do zresetowania
       boostalladded: Boost punktów %boost% dodany do wszystkich prac!
-      boostadded: Boost punktów &e%boost% &adodany do pracy &e%jobname%!
+      boostadded: Boost punktów &e%boost% &adodany do pracy &e%jobfullname%!
       infostats: '&c-----> &aStawka punktowa x%boost% włączona&c <-------'
   expboost:
     help:
@@ -87,10 +87,10 @@ command:
       args: '[jobname]/all/reset [time]/[rate]'
     output:
       allreset: Wszystkie boostery Exp'a zostały wyłączone
-      jobsboostreset: Exp boost został wyłączony dla pracy %jobname%
+      jobsboostreset: Exp boost został wyłączony dla pracy %jobfullname%
       nothingtoreset: Nie ma nic do zresetowania
       boostalladded: Boost Exp'a %boost% dodany do wszystkich prac!
-      boostadded: Boost Exp'a &e%boost% &adodany do pracy &e%jobname%!
+      boostadded: Boost Exp'a &e%boost% &adodany do pracy &e%jobfullname%!
       infostats: '&c-----> &aStawka Exp''a x%boost% włączona&c <-------'
   schedule:
     help:
@@ -192,7 +192,7 @@ command:
       args: ''
       list:
         job: '&ePrace:'
-        jobs: '  -> [&e%jobname%&r]'
+        jobs: '  -> [&e%jobfullname%&r]'
         actions: '    -> [&e%actionname%&r]'
         material: '      -> [&e%materialname%&r]      '
         materialRemove: '&c[X]'
@@ -214,7 +214,7 @@ command:
       args: ''
       list:
         quest: '&eZadania:'
-        jobs: '  -> [&e%jobname%&r]'
+        jobs: '  -> [&e%jobfullname%&r]'
         quests: '  -> [&e%questname%&r]'
         actions: '    -> [&e%actionname%&r]'
         objectives: '      -> [&e%objectivename%&r]'
@@ -266,9 +266,9 @@ command:
     error:
       nojob: Najpierw dołącz do pracy.
     output:
-      message: 'Poziom %joblevel% %jobname%: %jobxp%/%jobmaxxp% XP'
-      max-level: '     &cMaks. poziom   -   %jobname%'
-    bossBarOutput: 'Poziom %joblevel% %jobname%: %jobxp%/%jobmaxxp% XP%gain%'
+      message: 'Poziom %joblevel% %jobfullname%: %jobxp%/%jobmaxxp% XP'
+      max-level: '     &cMaks. poziom   -   %jobfullname%'
+    bossBarOutput: 'Poziom %joblevel% %jobfullname%: %jobxp%/%jobmaxxp% XP%gain%'
     bossBarGain: ' &7(&f%gain%&7)'
     bar1: '&e▏'
     bar2: '&2▏'
@@ -289,7 +289,7 @@ command:
       cantOpen: '&cNie można otworzyć tej strony'
       NoPermForItem: '&cNie masz wymaganych permisji do tego przedmiotu!'
       NoPermToBuy: '&cBrak permisji, aby kupić ten przedmiot'
-      NoJobReqForitem: '&cNie masz wymaganej pracy (&6%jobname%&e) z wymaganym poziomem (&6%joblevel%&e)'
+      NoJobReqForitem: '&cNie masz wymaganej pracy (&6%jobfullname%&e) z wymaganym poziomem (&6%joblevel%&e)'
       NoPoints: '&cNie masz wystarczającej ilości punktów'
       NoTotalLevel: '&cCałkowity poziom prac jest za niski (%totalLevel%)'
       Paid: '&eZapłaciłeś &6%amount% &eza ten przedmiot'
@@ -340,73 +340,73 @@ command:
     output:
       break:
         info: '&eNiszczenie'
-        none: '%jobname% nie otrzymuje pieniędzy za niszczenie bloków.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za niszczenie bloków.'
       tntbreak:
         info: '&eNiszczenieTNT'
-        none: '%jobname% nie otrzymuje pieniędzy za zniszczenie bloków za pomocą TNT.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za zniszczenie bloków za pomocą TNT.'
       place:
         info: '&eStawianie'
-        none: '%jobname% nie otrzymuje pieniędzy za stawianie bloków.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za stawianie bloków.'
       striplogs:
         info: '&eObdzieranie kłód'
-        none: '%jobname% nie otrzymuje pieniędzy za obdzieranie kłód.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za obdzieranie kłód.'
       kill:
         info: '&eZabójstwo'
-        none: '%jobname% nie otrzymuje pieniędzy za zabijanie potworów.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za zabijanie potworów.'
       mmkill:
         info: '&eZabójstwoMM'
-        none: '%jobname% nie otrzymuje pieniędzy za zabijanie mistycznych potworów.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za zabijanie mistycznych potworów.'
       fish:
         info: '&eŁowienie'
-        none: '%jobname% nie otrzymuje pieniędzy za łowienie.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za łowienie.'
       craft:
         info: '&eTworzenie'
-        none: '%jobname% nie otrzymuje pieniędzy za craftowanie.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za craftowanie.'
       smelt:
         info: '&ePrzepalanie'
-        none: '%jobname% nie otrzymuje pieniędzy za przepalanie.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za przepalanie.'
       brew:
         info: '&eWarzenie'
-        none: '%jobname% nie otrzymuje pieniędzy za warzenie misktur.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za warzenie misktur.'
       eat:
         info: '&eJedzenie'
-        none: '%jobname% nie otrzymuje pieniędzy za jedzenie posiłków.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za jedzenie posiłków.'
       dye:
         info: '&eFarbowanie'
-        none: '%jobname% nie otrzymuje pieniędzy za farbowanie.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za farbowanie.'
       enchant:
         info: '&eZaklinanie'
-        none: '%jobname% nie otrzymuje pieniędzy za zaklinanie.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za zaklinanie.'
       vtrade:
         info: '&eHandel z Villagerem'
-        none: '%jobname% nie otrzymuje pieniędzy za handlowanie z villagerem.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za handlowanie z villagerem.'
       repair:
         info: '&eNaprawianie'
-        none: '%jobname% nie otrzymuje pieniędzy za naprawianie.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za naprawianie.'
       breed:
         info: '&eHodowanie'
-        none: '%jobname% nie otrzymuje pieniędzy za hodowanie zwierząt.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za hodowanie zwierząt.'
       tame:
         info: '&eOswajanie'
-        none: '%jobname% nie otrzymuje pieniędzy za oswajanie.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za oswajanie.'
       milk:
         info: '&eDojenie'
-        none: '%jobname% nie otrzymuje pieniędzy za dojenie krów.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za dojenie krów.'
       shear:
         info: '&eStrzyżenie'
-        none: '%jobname% nie otrzymuje pieniędzy za strzyżenie owiec.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za strzyżenie owiec.'
       explore:
         info: '&eEksploracja'
-        none: '%jobname% nie zarabia na eksploracji.'
+        none: '%jobfullname% nie zarabia na eksploracji.'
       custom-kill:
         info: '&eZabójstwo niestandardowe'
-        none: '%jobname% nie otrzymuje pieniędzy za zabójstwa graczy.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za zabójstwa graczy.'
       collect:
         info: '&eZbieractwo'
-        none: '%jobname% nie otrzymuje pieniędzy za zbieranie bloków.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za zbieranie bloków.'
       bake:
         info: '&ePieczenie'
-        none: '%jobname% nie otrzymuje pieniędzy za gotowanie potraw.'
+        none: '%jobfullname% nie otrzymuje pieniędzy za gotowanie potraw.'
   playerinfo:
     help:
       info: Wyświetla jak dużo za każdą pracę otrzymuje się płacy i za co na innym graczu.
@@ -416,18 +416,18 @@ command:
       info: Dołącza do wybranej pracy.
       args: '[jobname]'
     error:
-      alreadyin: Jesteś już w pracy %jobname%.
-      fullslots: Nie możesz dołączyć do pracy %jobname%, nie ma żadnych dostępnych miejsc.
+      alreadyin: Jesteś już w pracy %jobfullname%.
+      fullslots: Nie możesz dołączyć do pracy %jobfullname%, nie ma żadnych dostępnych miejsc.
       maxjobs: Dołączyłeś już do zbyt wielu prac.
       rejoin: '&cNie można dołączyć ponownie. Poczekaj [time]'
     rejoin: '&aKliknij aby dołączyć ponownie do pracy: '
-    success: Dołączyłeś do pracy %jobname%.
+    success: Dołączyłeś do pracy %jobfullname%.
     confirm: '&2Naciśnij aby zatwierdzić akcję dołączania do pracy &7[jobname]&2.'
   leave:
     help:
       info: Opuść wybraną pracę.
       args: '[oldplayerjob]'
-    success: Opuściłeś pracę %jobname%.
+    success: Opuściłeś pracę %jobfullname%.
     confirmationNeed: '&cCzy jesteś pewien, że chcesz opuścić pracę &e[jobname]? Wpisz komendę ponownie w czasie &6[time] sekund &caby potwierdzić!'
   leaveall:
     help:
@@ -504,9 +504,9 @@ command:
       info: Zwolnij gracza z pracy.
       args: '[playername] [jobname]'
     error:
-      nojob: Gracz nie jest w pracy %jobname%.
+      nojob: Gracz nie jest w pracy %jobfullname%.
     output:
-      target: Zostałeś zwolniony z pracy %jobname%.
+      target: Zostałeś zwolniony z pracy %jobfullname%.
   fireall:
     help:
       info: Zwalnia gracza z wszystkich jego prac.
@@ -520,10 +520,10 @@ command:
       info: Zatrudnij gracza do pracy.
       args: '[playername] [jobname]'
     error:
-      alreadyin: Gracz już jest w pracy %jobname%.
-      fullslots: Nie możesz dołączyć do pracy %jobname%, nie ma żadnych dostępnych miejsc.
+      alreadyin: Gracz już jest w pracy %jobfullname%.
+      fullslots: Nie możesz dołączyć do pracy %jobfullname%, nie ma żadnych dostępnych miejsc.
     output:
-      target: Zostałeś zatrudniony jako %jobname%.
+      target: Zostałeś zatrudniony jako %jobfullname%.
   top:
     help:
       info: Wyświetla najlepszych graczy według nazw prac.
@@ -531,7 +531,7 @@ command:
     error:
       nojob: Nie można znaleźć żadnej pracy z tą nazwą.
     output:
-      topline: '&aTopka&e %amount% &agraczy poprzez pracę &e%jobname%'
+      topline: '&aTopka&e %amount% &agraczy poprzez pracę &e%jobfullname%'
       list: '&e%number%&a. &e%playername% &alvl &e%level% &awith&e %exp% &aExp''a'
       prev: '&e<<<<< Poprz strona &2|'
       next: '&2|&e Nast strona >>>>'
@@ -607,7 +607,7 @@ command:
       info: Awansuj gracza do X poziomu w pracy.
       args: '[playername] [jobname] [levels]'
     output:
-      target: Zostałeś awansowany do %levelsgained% poziomów w pracy %jobname%.
+      target: Zostałeś awansowany do %levelsgained% poziomów w pracy %jobfullname%.
   exp:
     help:
       info: Zmień Exp gracza dla pracy.
@@ -615,7 +615,7 @@ command:
     error:
       nojob: '&cTen gracz musi najpierw dołączyć do pracy.'
     output:
-      target: '&eTwój Exp zostało zmieniony dla pracy %jobname% &ei teraz jesteś na &6%level%lvl &ez &6%exp%eXP.'
+      target: '&eTwój Exp zostało zmieniony dla pracy %jobfullname% &ei teraz jesteś na &6%level%lvl &ez &6%exp%eXP.'
   level:
     help:
       info: Zmień poziom gracza w pracy.
@@ -623,25 +623,25 @@ command:
     error:
       nojob: '&cTen gracz musi najpierw dołączyć do pracy.'
     output:
-      target: '&eTwój poziom został zmieniony dla pracy %jobname% &ei teraz jesteś na &6%level%lvl &ez &6%exp%exp.'
+      target: '&eTwój poziom został zmieniony dla pracy %jobfullname% &ei teraz jesteś na &6%level%lvl &ez &6%exp%exp.'
   demote:
     help:
       info: Zdegraduj X poziomów gracza w pracy.
       args: '[playername] [jobname] [levels]'
     output:
-      target: Zdegradowano cię o %levelslost% poziomów w pracy %jobname%.
+      target: Zdegradowano cię o %levelslost% poziomów w pracy %jobfullname%.
   grantxp:
     help:
       info: Daje graczowi X doświadczenia w pracy.
       args: '[playername] [jobname] [xp]'
     output:
-      target: Otrzymałeś %xpgained% doświadczenia w pracy %jobname%.
+      target: Otrzymałeś %xpgained% doświadczenia w pracy %jobfullname%.
   removexp:
     help:
       info: Usuwa X doświadczenia gracza wykonującego pracę.
       args: '[playername] [jobname] [xp]'
     output:
-      target: Utraciłeś %xplost% doświadczenia w pracy %jobname%.
+      target: Utraciłeś %xplost% doświadczenia w pracy %jobfullname%.
   signupdate:
     help:
       info: Ręcznie aktualizuje tabliczkę według jej nazwy
@@ -671,13 +671,13 @@ command:
       'off': '&aPrzełączono: &4Wyłączone'
 message:
   skillup:
-    broadcast: '%playername% został awansowany do %titlename% %jobname%.'
-    nobroadcast: Gratulacje, zostałeś awansowany do %titlename% %jobname%.
+    broadcast: '%playername% został awansowany do %titlename% %jobfullname%.'
+    nobroadcast: Gratulacje, zostałeś awansowany do %titlename% %jobfullname%.
   levelup:
-    broadcast: '%playername% jest teraz na poziomie %joblevel% %jobname%.'
-    nobroadcast: Jesteś teraz na poziomie %joblevel% %jobname%.
+    broadcast: '%playername% jest teraz na poziomie %joblevel% %jobfullname%.'
+    nobroadcast: Jesteś teraz na poziomie %joblevel% %jobfullname%.
   leveldown:
-    message: '&cUtraciłeś poziom&e %lostLevel%&c w pracy&e %jobname%&c! Poziom:&6 %joblevel%&c.'
+    message: '&cUtraciłeś poziom&e %lostLevel%&c w pracy&e %jobfullname%&c! Poziom:&6 %joblevel%&c.'
   cowtimer: '&eMusisz nadal poczekać &6%time% &esek aby otrzymać zapłatę za pracę.'
   blocktimer: '&eMusisz poczekać &3[time] &esek aby otrzymać zapłatę za to!'
   taxes: '&3[amount] &eserwerowych podatków zostało przelane na te konto'
@@ -717,6 +717,6 @@ signs:
     info: '&0Informacje'
     archive: '&0Archiwizuj'
 scoreboard:
-  topline: '&2Topka &e%jobname%'
+  topline: '&2Topka &e%jobfullname%'
   gtopline: '&2Globalna top lista'
   line: '&2%number%. &e%playername% (&6%level%&e)'

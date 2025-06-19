@@ -730,6 +730,7 @@ public class PlayerManager {
             message = message.replace("%playername%", jPlayer.getName());
             message = message.replace("%playerdisplayname%", jPlayer.getDisplayName());
             message = message.replace("%joblevel%", prog.getLevelFormatted());
+            message = message.replace("%jobfullname%", prog.getJob().getJobFullName());
             message = message.replace("%lostLevel%", Integer.toString(oldLevel));
 
             if (player != null && (Jobs.getGCManager().LevelChangeActionBar || Jobs.getGCManager().LevelChangeChat)) {
@@ -836,6 +837,7 @@ public class PlayerManager {
         message = message.replace("%playername%", jPlayer.getName());
         message = message.replace("%playerdisplayname%", jPlayer.getDisplayName());
         message = message.replace("%joblevel%", prog.getLevelFormatted());
+        message = message.replace("%jobfullname%", prog.getJob().getJobFullName());
 
         if (Jobs.getGCManager().isBroadcastingLevelups() || Jobs.getGCManager().LevelChangeActionBar || Jobs.getGCManager().LevelChangeChat) {
             for (String line : message.split("\n")) {
